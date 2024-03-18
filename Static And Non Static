@@ -1,0 +1,31 @@
+class Account{
+    int id = 101;
+    String name = "SMITH";
+    long accno = 898976786789l;
+    long mobno = 7868686868l;
+    String email = "smith@gamail.com";
+    static String bname = "indian bank";
+    double bal = 500;
+    public void withdraw (double amt)
+    {
+        bal = bal - amt;
+        System.out.println(bal);
+    }
+    public void deposit (double amt)
+    {
+        bal = bal + amt;
+        System.out.println(bal);
+    }
+    public void display()
+    {
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(accno);
+        System.out.println(mobno);
+        System.out.println(email);
+    }
+    public static void main(String[] args) {
+        new Account().deposit(2000);
+    }
+
+}
