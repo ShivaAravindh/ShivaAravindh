@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+class MemberOfClass{
+    Scanner s = new Scanner(System.in);
+    int id ;
+    long ac_No ;
+    
+    String name ;
+    
+    long mobileNo ;
+    
+    String email ;
+    static String bankName = "INDIAN BANK";
+  
+    double bal ;
+    public void withdraw(double amt)
+    {
+     bal = bal - amt;
+     System.out.println("WITHDRAWN AMOUNT ; " + bal);
+    }
+    public void deposit(double amt)
+    {
+        bal = bal + amt;
+        System.out.println("DEPOSITED AMOUNT ; " + bal);
+    }
+    public static void display()
+    {
+        System.out.println("BANK NAME :" + bankName);
+       
+    }
+    public void getData()
+    {
+        System.out.println("ENTER THE ID  : "+ id);
+        id = s.nextInt();
+        System.out.println("ENTER THE AC_NO  : "+ ac_No);
+        ac_No = s.nextLong();
+        s.nextLine();
+        System.out.println("ENTER THE NAME  : "+ name);
+        name = s.nextLine();
+        System.out.println("ENTER THE  MOBILENUMBER  : "+ mobileNo);
+        mobileNo = s.nextLong();
+        s.nextLine();
+        System.out.println("ENTER THE  EMAIL  : "+ email);
+        email = s.nextLine();
+        System.out.println("ENTER THE  BALANCE  : "+ bal); 
+        bal = s.nextDouble();
+    }
+
+    public static void main(String[] args) { 
+        MemberOfClass.display();
+    MemberOfClass m = new MemberOfClass();
+    
+    m.getData();
+    m.withdraw(1000);
+    m.deposit(20000);
+ 
+    }
+}
